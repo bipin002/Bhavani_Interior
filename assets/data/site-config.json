@@ -1,0 +1,10 @@
+{
+  "clientName": "Bhavani Interiors",
+  "logo": "assets/images/logo_2.png",
+  "footerText": "© 2025 DreamHome Interiors. All rights reserved.",
+  "contact": {
+    "address": "123, ABC Street, Mumbai",
+    "phone": "+91 9876543210",
+    "email": "info@dreamhome.com"
+  }
+}
