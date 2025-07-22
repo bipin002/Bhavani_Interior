@@ -17,9 +17,9 @@ $(function () {
 
 
   // Inject layout meta/head links
-  $.get("partials/layout-header.html", function (data) {
-    $("head").append(data);
-  });
+  // $.get("partials/layout-header.html", function (data) {
+  //   $("head").append(data);
+  // });
 
   // Load header
 $("#header").load("partials/header.html", function () {
