@@ -49,12 +49,70 @@ const projectData = [
        "assets/images/Bedroom_02.jpeg",
         "assets/images/Bedroom_03.jpeg",
          "assets/images/Bedroom_04.jpeg",
-          "assets/images/Bedroom_05.jpeg",
-           "assets/images/Bedroom_06.jpeg",
+          "assets/images/Bedroom_05.jpeg",           
             "assets/images/Bedroom_07.jpeg",
              "assets/images/Bedroom_08.jpeg",
               "assets/images/Bedroom_09.jpeg",
                "assets/images/Bedroom_10.jpeg",
+    ]
+  },
+
+   {
+    id: "wardrobe",
+    title: "Modern Wardrobe",
+    mainImage: "assets/images/Wardrobe.jpeg",
+    description: "Minimalist with cozy tones",
+    longDescription: "This modern living room design reflects a harmonious blend of functionality and elegance. Using neutral tones and sleek furniture, the space was crafted to evoke both warmth and sophistication. The open layout allows natural light to amplify the design, while carefully selected decor elements add personality.",
+    client: "Mr. Sharma",
+    location: "Mumbai",
+    size: "400 sq.ft",
+    duration: "2 months",
+    images: [
+     "assets/images/Wardrobe.jpeg"
+    ]
+  },
+
+   {
+    id: "galleryarea",
+    title: "Modern GalleryArea",
+    mainImage: "assets/images/GalleryArea.jpeg",
+    description: "Minimalist with cozy tones",
+    longDescription: "This modern living room design reflects a harmonious blend of functionality and elegance. Using neutral tones and sleek furniture, the space was crafted to evoke both warmth and sophistication. The open layout allows natural light to amplify the design, while carefully selected decor elements add personality.",
+    client: "Mr. Sharma",
+    location: "Mumbai",
+    size: "400 sq.ft",
+    duration: "2 months",
+    images: [
+      "assets/images/GalleryArea.jpeg",
+    ]
+  },
+
+   {
+    id: "toilet",
+    title: "Modern Toilet",
+    mainImage: "assets/images/Toilet.jpeg",
+    description: "Minimalist with cozy tones",
+    longDescription: "This modern living room design reflects a harmonious blend of functionality and elegance. Using neutral tones and sleek furniture, the space was crafted to evoke both warmth and sophistication. The open layout allows natural light to amplify the design, while carefully selected decor elements add personality.",
+    client: "Mr. Sharma",
+    location: "Mumbai",
+    size: "400 sq.ft",
+    duration: "2 months",
+    images: [
+      "assets/images/Toilet.jpeg",
+    ]
+  },
+  {
+    id: "dinningroom",
+    title: "Modern Dinningroom",
+    mainImage: "assets/images/Toilet.jpeg",
+    description: "Minimalist with cozy tones",
+    longDescription: "This modern living room design reflects a harmonious blend of functionality and elegance. Using neutral tones and sleek furniture, the space was crafted to evoke both warmth and sophistication. The open layout allows natural light to amplify the design, while carefully selected decor elements add personality.",
+    client: "Mr. Sharma",
+    location: "Mumbai",
+    size: "400 sq.ft",
+    duration: "2 months",
+    images: [
+      "assets/images/Dinningroom_01.jpeg",
     ]
   },
 
