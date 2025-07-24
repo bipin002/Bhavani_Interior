@@ -17,6 +17,8 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
 <!-- Custom CSS -->
 <link rel="stylesheet" href="assets/css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 
 <body>
   <div id="header"></div>
@@ -69,7 +71,7 @@
 
       <!-- Image Column -->
       <div class="col-md-6 mb-4 mb-md-0">
-        <img src="assets/images/armchair-living-room-with-copy-space.jpg" alt="About Us" loading="lazy" class="img-fluid rounded shadow">
+        <img src="assets/images/armchair-living-room-with-copy-space.jpg" alt="About Us" data-aos="zoom-in-up"  loading="lazy" class="img-fluid rounded shadow">
       </div>
 
       <!-- Text Column -->
@@ -105,7 +107,7 @@
           <div class="row g-4">
             <div class="col-md-4">
               <div class="project-tile">
-                <a href="projects.html?project=living-room" class="project-link">
+                <a href="projects.html?project=living-room" class="project-link d-block w-100">
                 <img src="assets/images/Living_room.jpeg" loading="lazy" alt="Living Room">             
 
                 <div class="overlay">
@@ -117,7 +119,7 @@
             </div>
             <div class="col-md-4">
               <div class="project-tile">
-                <a href="projects.html?project=bedroom" class="project-link">
+                <a href="projects.html?project=bedroom" class="project-link d-block w-100">
                 <img src="assets/images/Bedroom_01.jpg" loading="lazy" alt="Bedroom">
                 <div class="overlay">
                   <h5>Bedroom</h5>
@@ -128,7 +130,7 @@
             </div>
             <div class="col-md-4">
               <div class="project-tile">
-                <a href="projects.html?project=kitchen" class="project-link">
+                <a href="projects.html?project=kitchen" class="project-link d-block w-100">
                 <img src="assets/images/Kitchen_01.jpeg" loading="lazy" alt="Kitchen">
                 <div class="overlay">
                   <h5>Kitchen</h5>
@@ -145,7 +147,7 @@
           <div class="row g-4">
             <div class="col-md-4">
               <div class="project-tile">
-                 <a href="projects.html?project=wardrobe" class="project-link">
+                 <a href="projects.html?project=wardrobe" class="project-link d-block w-100">
                 <img src="assets/images/Wardrobe.jpeg" loading="lazy" alt="Hallway">
                 <div class="overlay">
                   <h5>Wardrobe</h5>
@@ -156,7 +158,7 @@
             </div>
             <div class="col-md-4">
               <div class="project-tile">
-                 <a href="projects.html?project=galleryarea" class="project-link">
+                 <a href="projects.html?project=galleryarea" class="project-link d-block w-100">
                 <img src="assets/images/GalleryArea.jpeg" loading="lazy" alt="Office">
                 <div class="overlay">
                   <h5>Gallery space</h5>
@@ -167,7 +169,7 @@
             </div>
             <div class="col-md-4">
               <div class="project-tile">
-                 <a href="projects.html?project=toilet" class="project-link">
+                 <a href="projects.html?project=toilet" class="project-link d-block w-100">
                 <img src="assets/images/Toilet.jpeg" loading="lazy" alt="Lounge">
                 <div class="overlay">
                   <h5>Toilet</h5>
@@ -183,7 +185,7 @@
           <div class="row g-4">
             <div class="col-md-4">
               <div class="project-tile">
-                <a href="projects.html?project=dinningroom" class="project-link">
+                <a href="projects.html?project=dinningroom" class="project-link d-block w-100">
                 <img src="assets/images/Dinningroom_01.jpeg" loading="lazy" alt="Hallway">
                 <div class="overlay">
                   <h5>Dinning room</h5>
@@ -371,21 +373,44 @@
 
 
 <script src="assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-//  document.addEventListener("DOMContentLoaded", function () {
-//     const toggler = document.getElementById("customNavbarToggler");
-//     const navbarCollapse = document.getElementById("navbarNav");
+  AOS.init({
+    duration: 1000, // 1 second animation
+    once: true      // only animate once
+  });
+</script>
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector('#project-carousel'); // Section to observe
+    const carouselEl = document.querySelector('#multiProjectCarousel'); // Bootstrap carousel element
 
-//     let bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-//       toggle: false
-//     });
+    if (!carouselEl || !section) return;
 
-//     toggler.addEventListener("click", function () {
-//       if (navbarCollapse.classList.contains("show")) {
-//         bsCollapse.hide();
-//       } else {
-//         bsCollapse.show();
-//       }
-//     });
-//   });
+    let started = false;
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !started) {
+          const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+          carouselInstance.cycle();  // Start carousel
+          started = true;
+          observer.unobserve(section); // Stop observing after it starts
+        }
+      });
+    }, {
+      threshold: 0.4 // Trigger when 40% of the section is visible
+    });
+
+    observer.observe(section);
+  });
+</script> -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      const carouselEl = document.querySelector('#multiProjectCarousel');
+      const carousel = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+      carousel.cycle(); // Start sliding
+    }, 2000); // Delay in milliseconds (e.g., 3000 = 3 seconds)
+  });
 </script>
