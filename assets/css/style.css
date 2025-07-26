@@ -1704,7 +1704,7 @@ footer::before {
 /* ====================================== */
 /* DARK MODE SUPPORT - UNTOUCHED        */
 /* ====================================== */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
      --primary-color: #ebe1db;
      --secondary-color: #f4f4f4;
@@ -1723,7 +1723,7 @@ footer::before {
   .section-title {
     color: #e0e0e0;
   }
-}
+} */
 
 /* ====================================== */
 /* CUSTOM SCROLLBAR - UNTOUCHED         */
