@@ -1330,16 +1330,28 @@ img:hover {
 .contact-section .btn:hover::before {
   left: 100%;
 }
-.map-responsive{
-border: 2px solid #eedac8;
-width: 505px;
-}
-.map-responsive iframe {
+.map-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border: 2px solid #eedac8;
   border-radius: 8px;
-   
-  /* Existing: transition: all 0.3s var(--transition-smooth); - UNTOUCHED */
-  /* Existing: animation: fadeInUp 1s var(--transition-smooth) 0.6s both; - UNTOUCHED */
+  margin: 0 auto;
+  max-width: 100%;
 }
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 0;
+  display: block;
+}
+
 
 .map-responsive iframe:hover {
   /* Existing: transform: scale(1.02); - UNTOUCHED */
