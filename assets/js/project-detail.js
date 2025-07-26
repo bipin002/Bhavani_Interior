@@ -104,7 +104,7 @@ const projectData = [
   {
     id: "dinningroom",
     title: "Modern Dinningroom",
-    mainImage: "assets/images/Toilet.jpeg",
+    mainImage: "assets/images/Dinningroom_01.jpeg",
     description: "Minimalist with cozy tones",
     longDescription: "This modern living room design reflects a harmonious blend of functionality and elegance. Using neutral tones and sleek furniture, the space was crafted to evoke both warmth and sophistication. The open layout allows natural light to amplify the design, while carefully selected decor elements add personality.",
     client: "Mr. Sharma",

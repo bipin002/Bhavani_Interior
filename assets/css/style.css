@@ -953,9 +953,9 @@ h1, h2, h3 {
 /* ABOUT PAGE               */
 /* ====================================== */
 .about-hero {
-  height: 60vh;
+  height: 45vh;
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-              url('../images/charles-forerunner-3fPXt37X6UQ-unsplash.jpg') center/cover no-repeat;
+              url('../images/about-hero-2.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -963,6 +963,7 @@ h1, h2, h3 {
   /* Existing: animation: scaleIn 1.5s var(--transition-smooth); - UNTOUCHED */
   position: relative; /* For pseudo-element background */
   overflow: hidden; /* Hide overflow from background scale */
+  
 }
 
 .about-hero::before {
@@ -978,10 +979,12 @@ h1, h2, h3 {
     animation: zoomOut 20s ease-in-out infinite alternate; /* Gentle zoom for parallax */
     z-index: -1;
 }
-
+.about-hero .about-text{
+  padding-top: 10em;
+}
 .about-hero h1,
 .about-hero p {
-  color: #fff;
+  color: #ffffff;
   margin: 0;
   /* Existing: animation: fadeInUp 1s var(--transition-smooth) 0.5s both; - UNTOUCHED */
 }
@@ -1091,7 +1094,7 @@ h1, h2, h3 {
 /* ====================================== */
 .project-hero {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
-              url('../images/person-working-wood-working-industry-factory.jpg') center/cover no-repeat;
+              url('../images/project_hero.jpg') center/cover no-repeat;
   min-height: 300px;
   color: #fff;
   padding: 60px 0;
