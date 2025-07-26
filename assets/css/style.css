@@ -1706,13 +1706,13 @@ footer::before {
 /* ====================================== */
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-color: #2a2a2a;
-    --secondary-color: #1a1a1a;
-    --text-color: #e0e0e0;
+     --primary-color: #ebe1db;
+     --secondary-color: #f4f4f4;
+     --text-color: #333333;
   }
 
   .navbar {
-    background-color: rgba(26, 26, 26, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
   }
 
   .navbar-brand,

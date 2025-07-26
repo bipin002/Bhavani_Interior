@@ -174,4 +174,6 @@ $("#footer").load("partials/footer.html", function () {
 //     alert("Thank you for contacting us!");
 //   }, 500); // Wait until submission starts
 // });
+
+
 });

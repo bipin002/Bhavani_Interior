@@ -71,11 +71,11 @@
 
       <!-- Image Column -->
       <div class="col-md-6 mb-4 mb-md-0">
-        <img src="assets/images/armchair-living-room-with-copy-space.jpg" alt="About Us" data-aos="zoom-in-up"  loading="lazy" class="img-fluid rounded shadow">
+        <img src="assets/images/armchair-living-room-with-copy-space.jpg" alt="About Us" data-aos="zoom-in-up" data-aos-duration="1500" loading="lazy" class="img-fluid rounded shadow">
       </div>
 
       <!-- Text Column -->
-      <div class="col-md-6">
+      <div class="col-md-6" data-aos="zoom-in-left" data-aos-duration="1500">
         <h2 class="section-title mb-3">Who We Are</h2>
         <p class="section-text">
           At <strong>Bhavani Interiors</strong>, we believe that a well-designed space tells a story.
@@ -93,7 +93,7 @@
 </section>
 
 <section id="project-carousel" class="py-5">
-  <div class="container">
+  <div class="container" data-aos="zoom-in-up" data-aos-duration="1500">
     <div class="text-center mb-4">
       <h2 class="section-title">Project Highlights</h2>
       <p class="section-subtitle">Swipe through our curated spaces</p>
@@ -227,7 +227,7 @@
 </section>
 
 <section id="curved-carousel-section" class="py-5">
-  <div class="container">
+  <div class="container" data-aos="zoom-in-up" data-aos-duration="1500">
     <div class="text-center mb-4">
       <h2 class="section-title">Project Showcase</h2>
       <p class="section-subtitle">A modern and immersive preview</p>
@@ -375,11 +375,14 @@
 <script src="assets/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
+  
   AOS.init({
     duration: 1000, // 1 second animation
     once: true      // only animate once
   });
+
 </script>
+
 <!-- <script>
   document.addEventListener("DOMContentLoaded", function () {
     const section = document.querySelector('#project-carousel'); // Section to observe
