@@ -1330,9 +1330,13 @@ img:hover {
 .contact-section .btn:hover::before {
   left: 100%;
 }
-
+.map-responsive{
+border: 2px solid #eedac8;
+width: 505px;
+}
 .map-responsive iframe {
   border-radius: 8px;
+   
   /* Existing: transition: all 0.3s var(--transition-smooth); - UNTOUCHED */
   /* Existing: animation: fadeInUp 1s var(--transition-smooth) 0.6s both; - UNTOUCHED */
 }
