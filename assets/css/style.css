@@ -1214,6 +1214,22 @@ img:hover {
 .project-card:hover .card-img-top {
   /* Existing: transform: scale(1.05); - UNTOUCHED */
 }
+.project-details h3,
+.project-details h5 {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+}
+
+.client-name,
+.project-location {
+  font-weight: 500;
+}
+
+.main-img {
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 /* ====================================== */
 /* SERVICES PAGE                */
@@ -1757,7 +1773,7 @@ footer::before {
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    /* transition-duration: 0.01ms !important; */
   }
 }
 

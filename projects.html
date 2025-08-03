@@ -54,82 +54,86 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const params = new URLSearchParams(window.location.search);
-  const projectId = params.get("project");
+  const clientId = params.get("client");   // e.g. Lodha
+  const projectId = params.get("project"); // e.g. living-room
   const container = document.getElementById("projects-container");
 
   if (!container) return;
 
-  // Filter projects to display
-  const projectsToDisplay = projectId && projectId !== "All"
-    ? projectData.filter(p => p.id === projectId)
-    : projectData;
+  let matchedClients = [];
 
-  // if (projectsToDisplay.length === 0) {
-  //   container.innerHTML = "<p class='text-center'>No project found.</p>";
-  //   return;
-  // }
+  if (clientId) {
+    // Filter only the selected client
+    matchedClients = projectData.filter(c => c.clientId === clientId);
+  } else {
+    // Show all clients if no clientId passed
+    matchedClients = projectData;
+  }
 
-  // Render each project
-  
-  projectsToDisplay.forEach(project => {
-    
-    const projectHTML = document.createElement("div");
+  matchedClients.forEach(client => {
+    let projectsToRender = [];
 
-    projectHTML.innerHTML = `
-      <section class="main-project-detail py-5">
-        <div class="container">
-          <div class="text-center">
-          <h2 class="project-title display-5 fw-bold">${project.title}</h2>
-           </div>
-          <div class="row align-items-center g-4">
-            <div class="col-md-6">
-              <img src="${project.mainImage}" loading="lazy"  data-aos="zoom-in-up" data-aos-duration="1500" class="main-img img-fluid rounded shadow" alt="${project.title}">
+    if (projectId) {
+      // Show only matching project under the client
+      projectsToRender = client.projects.filter(p => p.id === projectId);
+    } else {
+      // Show all projects for the client
+      projectsToRender = client.projects;
+    }
+
+    projectsToRender.forEach(project => {
+      const projectHTML = document.createElement("div");
+      projectHTML.innerHTML = `
+        <section class="main-project-detail py-5">
+          <div class="container">
+            <div class="text-center mb-4">
+              <h2 class="project-title display-5 fw-bold">${project.title}</h2>
+              <h2 class="text-muted">${project.clientName}</h2>
             </div>
-            <div class="col-md-6">
-              <p class="project-description text-muted">${project.description}</p>
-              <ul class="list-unstyled mt-4">
-                <li><strong>Client:</strong> <span class="client-name">${project.client}</span></li>
-                <li><strong>Location:</strong> <span class="project-location">${project.location}</span></li>
-                <li><strong>Project Size:</strong> <span class="project-size">${project.size}</span></li>
-                <li><strong>Duration:</strong> <span class="project-duration">${project.duration}</span></li>
-              </ul>
+
+            <div class="row justify-content-center text-center mb-4">
+              <div class="col-lg-8" data-aos="zoom-in-up" data-aos-duration="1500">
+                <img src="${project.mainImage}" loading="lazy" class="main-img img-fluid rounded shadow" alt="${project.title}">
+              </div>
+            </div>
+
+            <div class="row justify-content-center text-center">
+              <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1500">
+                <div class="project-details">
+                  <h4><strong>Location:</strong> <span class="text-muted">${project.location}</span></h4>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="project-description py-3">
-        <div class="container">
-          <h4 class="fw-bold mb-3 text-center">Project Overview</h4>
-          <p class="project-detailed-description text-muted fs-5">${project.longDescription}</p>
-        </div>
-      </section>
+        <section class="project-description py-3">
+          <div class="container">
+            <h4 class="fw-bold mb-3 text-center">Project Overview</h4>
+            <p class="text-muted fs-5">${project.longDescription}</p>
+          </div>
+        </section>
 
-      <section class="project-gallery py-4 bg-light">
-        <div class="container">
-          <h4 class="text-center fw-bold mb-4">More Images</h4>
-          <div class="row g-4 gallery-container">
-  ${project.images.map((img, i) => {
-    // Determine position in the row (assumes 3 images per row)
-    const pos = i % 3;
-    let animation = "fade-right"; // default
+        <section class="project-gallery py-4 bg-light">
+          <div class="container">
+            <h4 class="text-center fw-bold mb-4">More Images</h4>
+            <div class="row g-4">
+              ${project.images.map((img, i) => {
+                const pos = i % 3;
+                const animation = pos === 1 ? "zoom-in-up" : pos === 2 ? "fade-left" : "fade-right";
+                return `
+                  <div class="col-md-4" data-aos="${animation}" data-aos-duration="1500">
+                    <img src="${img}" loading="lazy" class="img-fluid rounded shadow-sm mb-3" alt="">
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        </section>
+      `;
 
-    if (pos === 1) animation = "zoom-in-up";
-    else if (pos === 2) animation = "fade-left";
-
-    return `
-      <div class="col-md-4" data-aos="${animation}" data-aos-duration="1500">
-        <img src="${img}" loading="lazy" class="img-fluid rounded shadow-sm mb-3" alt="">
-      </div>
-    `;
-  }).join('')}
-</div>
-
-        </div>
-      </section>
-    `;
-
-    container.appendChild(projectHTML);
+      container.appendChild(projectHTML);
+    });
   });
 });
 
