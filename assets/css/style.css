@@ -278,7 +278,7 @@ a {
   height: 106px;
   object-fit: contain; /* Changed from cover to contain for better logo scaling */
   /* Existing: transition: all 0.4s var(--transition-bounce); - UNTOUCHED */
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+  /* filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1)); */
 }
 
 .logo-img:hover {
