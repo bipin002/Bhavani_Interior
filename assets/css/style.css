@@ -283,7 +283,7 @@ a {
 
 .logo-img:hover {
   /* Existing: transform: scale(1.1) rotate(5deg); - UNTOUCHED */
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
+  /* filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2)); */
 }
 
 /* Nav Links Animation */
