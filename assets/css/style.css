@@ -752,7 +752,7 @@ h1, h2, h3 {
   display: flex;
   gap: 20px;
   overflow-x: hidden;
-  padding: 0 100px;
+  padding: 10px 100px;
   scroll-behavior: smooth;
   perspective: 1000px;
   align-items: center;
@@ -1733,7 +1733,7 @@ footer::before {
 
   .curved-card {
     flex: 0 0 240px;
-    height: 320px;
+    height: 345px;
   }
 
   .contact-content {
