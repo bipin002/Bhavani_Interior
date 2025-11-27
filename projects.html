@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="video-modal" id="videoModal">
           <div class="video-container">
             <span class="close-btn">&times;</span>
-            <video id="projectVideo" controls autoplay>
+            <video id="projectVideo" controls controlsList="nodownload" autoplay>
               <source src="${project.video}" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -231,6 +231,12 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       }
+      document.addEventListener("contextmenu", function (e) {
+  if (e.target.tagName === "VIDEO") {
+    e.preventDefault();
+  }
+});
+
     });
   });
 });
