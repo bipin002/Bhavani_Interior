@@ -15,7 +15,7 @@ const projectData = [
         description: "A welcoming space that exudes elegance and sophistication..",
         longDescription: "The modern lobby is designed as the perfect first impression of the residence. With sleek finishes, ambient lighting, and a harmonious color palette, it sets a tone of luxury and comfort. The layout emphasizes openness and functionality, while the refined materials and textures highlight contemporary aesthetics. This space creates a warm and inviting atmosphere for residents and guests, seamlessly blending style with comfort.",
         clientName: "Godrej Planet Tower 1 & 2",
-        location: "Mahalaxmi Sath Rasta ,Mumbai",
+        location: "Mahalaxmi, Mumbai",
         // images: [
         //    "assets/images/Godrej_Lobby_01.jpg",
         //     "assets/images/Godrej_Lobby_02.jpg",
@@ -62,7 +62,7 @@ const projectData = [
         description: "A welcoming space that exudes elegance and sophistication..",
         longDescription: "The modern lobby is designed as the perfect first impression of the residence. With sleek finishes, ambient lighting, and a harmonious color palette, it sets a tone of luxury and comfort. The layout emphasizes openness and functionality, while the refined materials and textures highlight contemporary aesthetics. This space creates a warm and inviting atmosphere for residents and guests, seamlessly blending style with comfort.",
         clientName: "Godrej Planet Tower 3 & 4",
-        location: "Mahalaxmi Sath Rasta ,Mumbai",
+        location: "Mahalaxmi, Mumbai",
         // images: [
         //    "assets/images/Godrej_Lobby_01.jpg",
         //     "assets/images/Godrej_Lobby_02.jpg",
