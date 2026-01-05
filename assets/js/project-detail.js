@@ -1,4 +1,38 @@
 const projectData = [
+  {
+    clientId:"Walesh",
+    projects:[
+      {
+        id: "Office",
+        title: "Modern Office",
+        mainImage: "assets/images/Bhavani_office_12.jpeg",
+        description: "Minimalist with professional warmth",
+        longDescription: "Designed to support productivity and comfort, this office space blends modern aesthetics with practical functionality. Clean lines, ergonomic furniture, and well-planned lighting create an efficient work environment, while subtle textures and warm tones add a sense of calm and focus. The layout encourages seamless workflow, making it ideal for both focused tasks and collaborative discussions within a contemporary setting.",
+        clientName:"Walesh",
+        location: "Andheri East ,Mumbai",
+        
+        // images: [
+        //   "assets/images/Kitchen_01.jpeg",
+         
+        // ]
+         gallery: [
+    { type: "image", src: "assets/images/Bhavani_office_02.jpeg" },
+     { type: "image", src: "assets/images/Bhavani_office_03.jpeg" },
+      { type: "image", src: "assets/images/Bhavani_office_04.jpeg" },
+       { type: "image", src: "assets/images/Bhavani_office_05.jpeg" },
+        { type: "image", src: "assets/images/Bhavani_office_06.jpeg" },
+         { type: "image", src: "assets/images/Bhavani_office_07.jpeg" },
+          { type: "image", src: "assets/images/Bhavani_office_08.jpeg" },
+           { type: "image", src: "assets/images/Bhavani_office_09.jpeg" },
+            { type: "image", src: "assets/images/Bhavani_office_10.jpeg" },
+            { type: "image", src: "assets/images/Bhavani_office_11.jpeg" },
+            { type: "image", src: "assets/images/Bhavani_office_01.jpeg" },
+
+
+         ]
+      },
+    ]
+  },
    {
     clientId: "GodrejOneTwo",
     
